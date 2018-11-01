@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h1 th:text="${info}" />
+        <div>
+            <!-- <img alt="这是图片" src="/img/001.png"/> -->
+            <img alt="验证码" onclick = "this.src='/defaultKaptcha?d='+new Date()*1" src="/defaultKaptcha" />
+        </div>
+        <form action="imgvrifyControllerDefaultKaptcha" method="post">
+            <input type="text" name="vrifyCode" />
+            <input type="submit" value="提交"></input>
+        </form>
+</body>
+</html>
